@@ -8,8 +8,12 @@ export const businessService = {
     const response = await axiosAuth.get(`${api}/business`);
     return response?.data.business;
   },
-  getBusinessbyId: async (id: number): Promise<any> => {
-    const response = await axiosAuth.get(`${api}/business/${id}`);
+  getBusinessLocations: async (): Promise<any> => {
+    const response = await axiosAuth.get(`${api}/location`);
+    return response?.data;
+  },
+  getBusinessClassifications: async (): Promise<any> => {
+    const response = await axiosAuth.get(`${api}/classification`);
     return response?.data;
   },
   

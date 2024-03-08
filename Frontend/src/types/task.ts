@@ -1,15 +1,7 @@
-export type task = {
+export type business = {
   id: number;
-  title: string;
-  description: string;
-  published: boolean;
-};
-
-export type editTask = {
-  status: boolean;
-  id: number | undefined;
-};
-export type editTaskData = {
-  status: number;
-  task: task | undefined;
+  username: string;
+  display_name: string;
+  classifications: number[];
+  locations_served: number[];
 };
