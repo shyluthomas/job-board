@@ -31,7 +31,6 @@ export const Businesslice = createSlice({
     setMessage: (state, action) => {
       state.message = action.payload;
     },
-   
   },
 });
 export const {
@@ -42,7 +41,6 @@ export const {
   fetchBusinessLocation,
   updateBusinessLocation,
   fetchBusinessClassification,
-  updatebusinessClassification
-  
+  updatebusinessClassification,
 } = Businesslice.actions;
 export default Businesslice.reducer;

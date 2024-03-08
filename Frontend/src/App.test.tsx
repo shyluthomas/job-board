@@ -1,11 +1,9 @@
-import App from './App'
-import { render, screen } from './utils/test-utils'
+import App from "./App";
+import { render, screen } from "./utils/test-utils";
 
-describe('Simple working test', () => {
-  it('the title is visible', () => {
-    render(<App />)
-    expect(screen.getByText(/Task Manager \+ !/i)).toBeInTheDocument()
-  })
-
-  
-})
+describe("Simple working test", () => {
+  it("the title is visible", () => {
+    render(<App />);
+    expect(screen.getByText(/Task Manager \+ !/i)).toBeInTheDocument();
+  });
+});

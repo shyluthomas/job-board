@@ -14,7 +14,7 @@ const FullLayout = (): JSX.Element => {
             </div>
 
             <MenubarTrigger className="text-white text-xl p-6">
-            Business
+              Business
             </MenubarTrigger>
           </div>
         </MenubarMenu>

@@ -1,42 +1,37 @@
 import { Button } from "@/components/ui/button";
 import { CaretSortIcon } from "@radix-ui/react-icons";
-import { business, task } from "@/types";
+import { business } from "@/types";
 import { ColumnDef } from "@tanstack/react-table";
 import { useAppSelector } from "@/hooks/hooks";
-// import { useAppDispatch } from "@/hooks/hooks";
-// import {
-//   setConfirmationSate,
-//   setDeleteTask,
-//   setEditTask,
-// } from "@/store/reducers/taskReducer";
 
 const ActionLocation = ({ id }: any): JSX.Element => {
-  const businessLocation:any = useAppSelector((state) => state.businessReducer.businessLocation);
-  const response =  businessLocation.location.data.filter((item: any) => id.includes(item.id))
+  const businessLocation: any = useAppSelector(
+    (state) => state.businessReducer.businessLocation
+  );
+  const response = businessLocation.location.data.filter((item: any) =>
+    id.includes(item.id)
+  );
   return (
     <div className="flex gap-2">
-      { response.map((data:any) => 
-              <p>
-              {data.name}
-              </p>
-      )}
-        
+      {response.map((data: any) => (
+        <p>{data.name}</p>
+      ))}
     </div>
   );
 };
 
 const ActionClassification = ({ id }: any): JSX.Element => {
-  const businessClassification:any = useAppSelector((state) => state.businessReducer.businessClassification);
-  console.log('first', businessClassification, id)
-  const response =  businessClassification.classification.data.filter((item: any) => id.includes(item.id))
+  const businessClassification: any = useAppSelector(
+    (state) => state.businessReducer.businessClassification
+  );
+  const response = businessClassification.classification.data.filter(
+    (item: any) => id.includes(item.id)
+  );
   return (
     <div className="flex gap-2">
-      { response.map((data:any) => 
-              <p>
-              {data.name}
-              </p>
-      )}
-        
+      {response.map((data: any) => (
+        <p>{data.name}</p>
+      ))}
     </div>
   );
 };

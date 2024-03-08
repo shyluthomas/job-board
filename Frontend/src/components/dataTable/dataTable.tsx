@@ -5,7 +5,7 @@ import {
   useReactTable,
   getSortedRowModel,
   SortingState,
-  getPaginationRowModel
+  getPaginationRowModel,
 } from "@tanstack/react-table";
 
 import {
@@ -21,7 +21,7 @@ import {
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
@@ -36,8 +36,7 @@ export function DataTable<TData, TValue>({
   data,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([]);
-  const [columnVisibility, setColumnVisibility] =
-    useState<any>({})
+  const [columnVisibility, setColumnVisibility] = useState<any>({});
   const table = useReactTable({
     data,
     columns,
@@ -48,11 +47,9 @@ export function DataTable<TData, TValue>({
     onColumnVisibilityChange: setColumnVisibility,
     state: {
       sorting,
-      columnVisibility
+      columnVisibility,
     },
   });
-
-
 
   return (
     <>
@@ -65,18 +62,14 @@ export function DataTable<TData, TValue>({
           className="max-w-sm"
         />
         <div className="flex gap-2">
-          <DropdownMenu >
+          <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button >
-                Columns
-              </Button>
+              <Button>Columns</Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               {table
                 .getAllColumns()
-                .filter(
-                  (column) => column.getCanHide()
-                )
+                .filter((column) => column.getCanHide())
                 .map((column) => {
                   return (
                     <DropdownMenuCheckboxItem
@@ -89,22 +82,20 @@ export function DataTable<TData, TValue>({
                     >
                       {column.id}
                     </DropdownMenuCheckboxItem>
-                  )
+                  );
                 })}
             </DropdownMenuContent>
-        </DropdownMenu>
-       
+          </DropdownMenu>
         </div>
-        
       </div>
       <div className="rounded-md border">
         <Table>
-          <TableHeader >
+          <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id} className="">
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead key={header.id} >
+                    <TableHead key={header.id}>
                       {header.isPlaceholder
                         ? null
                         : flexRender(

@@ -8,8 +8,8 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    css:true,
-    setupFiles: './src/test/setup.ts'
+    css: true,
+    setupFiles: "./src/test/setup.ts",
   },
   resolve: {
     alias: {
@@ -21,10 +21,10 @@ export default defineConfig({
   },
   server: {
     port: 5555,
-    host:true
+    host: true,
   },
   preview: {
     port: 5555,
-    host:true
-  }
+    host: true,
+  },
 });
