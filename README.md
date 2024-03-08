@@ -9,7 +9,7 @@ Job board
  - npm install
 
  ## Running the Backend
-  - Setup the sqlite by running 'npm run migrate'
+
   - npm run start
   - it will open the port : 8044
  
