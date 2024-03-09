@@ -4,9 +4,10 @@ import { logger, errorHandler } from "./middlewares";
 import cors = require("cors");
 import { classificationsRoute } from "./routes/classificationsRoute";
 import { locationRoute } from "./routes/locationRoute";
+
+export const app = express();
 export const startServer = () => {
-  const port = process.env.PORT || 8044;
-  const app = express();
+   
   app.use(express.json());
   app.use(
     express.urlencoded({
@@ -28,8 +29,6 @@ export const startServer = () => {
   /* Handling Error */
   app.use(errorHandler);
 
-  const server = app.listen(port, () => {
-    console.log("server started..port => ", port);
-  });
+  
   return app;
 };

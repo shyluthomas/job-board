@@ -13,7 +13,10 @@ Job board
   - npm run start
   - it will open the port : 8044
  
-
+# Test config
+- install and config jest
+- npx ts-jest config:init
+- running the test  "npm run test"
 
   # Frontend Setup
 
