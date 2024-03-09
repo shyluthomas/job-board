@@ -13,4 +13,3 @@ locationRoute.post("/get_location", async (req, res) => {
   const response: any = await locationController.getLocationByIds(locations);
   res.status(response.status).send(response);
 });
-

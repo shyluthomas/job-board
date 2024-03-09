@@ -7,7 +7,6 @@ import { locationRoute } from "./routes/locationRoute";
 
 export const app = express();
 export const startServer = () => {
-   
   app.use(express.json());
   app.use(
     express.urlencoded({
@@ -29,6 +28,5 @@ export const startServer = () => {
   /* Handling Error */
   app.use(errorHandler);
 
-  
   return app;
 };

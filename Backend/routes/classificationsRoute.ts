@@ -9,7 +9,8 @@ classificationsRoute.get("/", async (_req, res) => {
 
 classificationsRoute.post("/get_classification", async (req, res) => {
   const classifications = req.body?.classifications;
-  const response: any = await classificationController.geclassificationByIds(classifications);
+  const response: any = await classificationController.geclassificationByIds(
+    classifications
+  );
   res.status(response.status).send(response);
 });
-

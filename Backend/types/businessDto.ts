@@ -3,9 +3,11 @@ export type businessDto = {
   username: string;
   display_name: string;
   classifications: number[];
-  locations_served: number[]
+  locations_served: number[];
 };
 
-
 export type ListBusinessDto = businessDto[];
-export type ListBusinessResponseDto = { status: number, business: businessDto[] | null};
+export type ListBusinessResponseDto = {
+  status: number;
+  business: businessDto[] | null;
+};
