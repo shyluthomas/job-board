@@ -55,6 +55,7 @@ export function DataTable<TData, TValue>({
     <>
       <div className="flex justify-between items-center py-4">
         <Input
+          data-testid="searchinput"
           placeholder="Search title..."
           onChange={(event: any) => {
             console.log("first", event.target.value);
@@ -64,7 +65,7 @@ export function DataTable<TData, TValue>({
         <div className="flex gap-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button>Columns</Button>
+              <Button data-testid="column">Columns</Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               {table
@@ -141,6 +142,7 @@ export function DataTable<TData, TValue>({
       <div className="flex items-center justify-end space-x-2 py-4">
         <div className="space-x-2">
           <Button
+            data-testid="pagination"
             variant="outline"
             size="sm"
             onClick={() => table.previousPage()}

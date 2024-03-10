@@ -18,7 +18,7 @@ const BusinessList = (): JSX.Element => {
     <div className="flex w-full mx-auto p-10">
       <Card className="w-full">
         <CardHeader>
-          <CardTitle>Business List</CardTitle>
+          <CardTitle data-testid="cardTitle">Business List</CardTitle>
         </CardHeader>
         <CardContent>
           {businessList.status && businessList.status === "loading" ? (
